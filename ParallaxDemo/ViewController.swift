@@ -5,6 +5,7 @@
 //  Created by Alan Flament on 23/10/2016.
 //  Copyright © 2016 Alan Flament. All rights reserved.
 //
+// Source: https://www.youtube.com/watch?v=4f65hctNXro&feature=youtu.be&list=PLpZBns8dFbgz7BWwgq1Hkaazu0hLg9xHg&utm_content=buffer4b4f3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 import UIKit
 
