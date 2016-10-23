@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParallaxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rd0-b1-iJw">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="250" id="D9Z-Ic-2kg" customClass="ImageCell" customModule="ParallaxDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D9Z-Ic-2kg" id="alN-ri-JtK">
+                                            <frame key="frameInset" width="375" height="249"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="3OF-4E-gBM">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="jjd-Cy-wXP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeJ-et-3w2">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="xeJ-et-3w2" firstAttribute="centerX" secondItem="alN-ri-JtK" secondAttribute="centerX" id="3yw-eS-eui"/>
+                                                <constraint firstItem="3OF-4E-gBM" firstAttribute="leading" secondItem="alN-ri-JtK" secondAttribute="leading" id="Jn4-Rc-DUr"/>
+                                                <constraint firstAttribute="trailing" secondItem="3OF-4E-gBM" secondAttribute="trailing" id="N7p-Tj-Wsb"/>
+                                                <constraint firstItem="xeJ-et-3w2" firstAttribute="centerY" secondItem="alN-ri-JtK" secondAttribute="centerY" id="dov-c1-Aph"/>
+                                                <constraint firstItem="3OF-4E-gBM" firstAttribute="top" secondItem="alN-ri-JtK" secondAttribute="top" id="gNO-qt-mQh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageTitle" destination="xeJ-et-3w2" id="P0u-nc-IBg"/>
+                                            <outlet property="parallaxImage" destination="3OF-4E-gBM" id="a4y-cL-cSx"/>
+                                            <outlet property="parallaxImageHeight" destination="jjd-Cy-wXP" id="69n-fg-wRJ"/>
+                                            <outlet property="parallaxImageTopConstraint" destination="gNO-qt-mQh" id="gFb-HY-PLU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Rch-sR-jN2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="z2F-rm-Mif"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rd0-b1-iJw" secondAttribute="bottom" id="IMf-dG-Flo"/>
+                            <constraint firstItem="rd0-b1-iJw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="c54-Sn-pZD"/>
+                            <constraint firstAttribute="trailing" secondItem="rd0-b1-iJw" secondAttribute="trailing" id="qUe-f4-7xC"/>
+                            <constraint firstItem="rd0-b1-iJw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="trW-75-R7R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rd0-b1-iJw" id="Yht-Wf-bls"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image-1" width="2581" height="1721"/>
+    </resources>
+</document>
